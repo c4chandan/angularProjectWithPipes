@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firstapp';
+
+  isValid=true;
+  clickme(i:any)
+  {
+    this.isValid=i;
+  }
 }

@@ -1,0 +1,35 @@
+<h1>hello employee</h1>
+
+<!-- <ng-template> -->
+<table border="1">
+    <tr>
+        <th>product Id </th>
+        <th>product Name</th>
+        <th>product Price</th>
+    </tr>
+    <tr *ngFor="let products of productList">
+        <td>{{products.productId}}</td>
+        <td>{{products.productName}}</td>
+        <td>{{products.productPrice}}</td>
+    </tr>
+</table>
+<button (click)="addProduct('pId')">Add Products</button>
+
+<button (click)="removeRow(products.pId)">remove Products</button>
+<!-- </ng-template> -->
+
+<br/>
+<select (change)=" valueChoosen($event)">
+    <option value="1">1</option>
+    <option value="2" >2</option>
+    <option value="3">3</option>
+    <option value="default">another</option>
+</select>
+My Choosen Val : {{selectedValue}}
+<div [ngSwitch]="selectedValue">
+    <h3 *ngSwitchCase="'one'">First</h3>
+    <h3 *ngSwitchCase="'two'">Second</h3>
+    <h3 *ngSwitchCase="'three'">Third</h3>
+    <h3 *ngSwitchDefault>Default</h3>
+</div> 
+

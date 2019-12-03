@@ -1,0 +1,19 @@
+<br />
+<p class="alert alert-danger" align="center">power-booster works!</p>
+
+<hr />
+<table class="table table-responsive table-hover">
+    <tr>
+        <td>Normal Power</td>
+        <td>:</td>
+        <td><input type="text" class="form-control" [(ngModel)]="value"></td>
+    </tr>
+    <tr>
+        <td>Boost Factor</td>
+        <td>:</td>
+        <td><input type="text" class="form-control" [(ngModel)]="exponent"></td>
+    </tr>
+    <tr colspan="2">
+<td>Super Hero Power:{{ value | powerchek:exponent}}</td>
+    </tr>
+</table>

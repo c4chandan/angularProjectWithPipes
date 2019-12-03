@@ -1,0 +1,67 @@
+<h1 class="alert alert-danger">student Details... !</h1>
+<!--
+<ul class="list-group">
+    <li *ngFor="let cObj of cityList" class="list-group-item">
+        {{cObj.city}}
+        <ul class="list-group">
+            <li *ngFor="let Obj of cObj.student" class="list-group-item">
+                {{Obj.studentId}}
+                {{Obj.studentName}}
+            </li>
+        </ul>
+    </li>
+
+</ul>
+<br />
+
+<button type="button" class="btn btn-primary">button</button> -->
+
+<table class="table">
+    <tr>
+        <td>
+            <label>Ener Your Name</label>
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="userName" class="form-control" />
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            welcome:
+        </td>
+        <td>
+            {{userName | reverString}}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <p *ngIf="displayDetails">If you want a full-width jumbotron without rounded borders, add the
+                .jumbotron-fluid class and a .container or .container-fluid inside of it:</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="reset" [disabled]="checkDisabled()" (click)="resetUserName()" value="reset" />
+        </td>
+
+        <td>
+            <button type="click" (click)="showDetails()">Display details</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+
+            <button type="button" (click)="onCount()">count</button>
+
+        </td>
+        <td>
+            <p>{{countArr}}</p>
+
+        </td>
+    </tr>
+</table>
+
